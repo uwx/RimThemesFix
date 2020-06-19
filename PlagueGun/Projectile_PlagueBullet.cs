@@ -5,7 +5,7 @@ using System.Text;
 using Verse;
 using RimWorld;
 
-namespace Plague
+namespace TST_PlagueGun
 {
     public class Projectile_PlagueBullet : Bullet
     {

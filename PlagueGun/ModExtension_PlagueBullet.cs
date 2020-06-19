@@ -5,7 +5,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 
-namespace Plague
+namespace TST_PlagueGun
 {
     public class ModExtension_PlagueBullet : DefModExtension
     {
