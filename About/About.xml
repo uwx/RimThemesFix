@@ -2,10 +2,9 @@
 <ModMetaData>
   <name>Test Mod - Plague Gun</name>
   <author>YourNameHere</author>
+  <packageId>YourNameHere.PlagueGun</packageId>
   <supportedVersions>
-    <li>1.0</li>
+    <li>1.1</li>
   </supportedVersions>
-  <description>V1.0
-    This mod adds a plague gun, a weapon that has a chance to give your enemies the plague.
-  </description>
+  <description>V1.0\n\nThis mod adds a plague gun, a weapon that has a chance to give your enemies the plague.</description>
 </ModMetaData>
