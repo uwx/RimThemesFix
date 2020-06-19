@@ -17,11 +17,11 @@
             <speed>55</speed>
         </projectile>
         <!-- This gives the projectile the class we made, allowing it to use our Impact() override. -->
-        <thingClass>Plague.Projectile_PlagueBullet</thingClass>
+        <thingClass>TST_PlagueGun.Projectile_PlagueBullet</thingClass>
 		<modExtensions>
-			<!-- The Class="Plague.ModExtension_PlagueBullet attribute links this XML node to a Class. -->
-			<!-- Our class is named ModExtension_PlagueBullet, and is found in the Plague namespace. -->
-			<li Class="Plague.ModExtension_PlagueBullet">
+			<!-- The `Class="TST_PlagueGun.ModExtension_PlagueBullet` attribute links this XML node to a Class. -->
+			<!-- Our class is named ModExtension_PlagueBullet, and is found in the TST_PlagueGun namespace. -->
+			<li Class="TST_PlagueGun.ModExtension_PlagueBullet">
 				<AddHediffChance>0.05</AddHediffChance>
 				<HediffToAdd>Plague</HediffToAdd>
 			</li>
