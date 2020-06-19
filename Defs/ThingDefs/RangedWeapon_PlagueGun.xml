@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs>
-
-    <!-- The Class="Plague.ThingDef_PlagueBullet links this XML Def to a Class. -->
-    <!-- Our class is named ThingDef_PlagueBullet, and is found in the Plague namespace." -->
+<Defs>    
     <!-- Tags with an empty comment behind them are changed from their original values. -->
 
-    <ThingDef Class="Plague.ThingDef_PlagueBullet" ParentName="BaseBullet">
+    <ThingDef ParentName="BaseBullet">
         <defName>TST_Bullet_PlagueGun</defName> <!-- -->
         <label>plague bullet</label> <!-- -->
         <graphicData>
@@ -19,10 +16,16 @@
             <stoppingPower>1</stoppingPower>
             <speed>55</speed>
         </projectile>
-        <!-- The below three lines are added for the C# portion of the mod. -->
-        <AddHediffChance>0.05</AddHediffChance>
-        <HediffToAdd>Plague</HediffToAdd>
+        <!-- This gives the projectile the class we made, allowing it to use our Impact() override. -->
         <thingClass>Plague.Projectile_PlagueBullet</thingClass>
+		<modExtensions>
+			<!-- The Class="Plague.ModExtension_PlagueBullet attribute links this XML node to a Class. -->
+			<!-- Our class is named ModExtension_PlagueBullet, and is found in the Plague namespace. -->
+			<li Class="Plague.ModExtension_PlagueBullet">
+				<AddHediffChance>0.05</AddHediffChance>
+				<HediffToAdd>Plague</HediffToAdd>
+			</li>
+		</modExtensions>
     </ThingDef>
 
     <ThingDef ParentName="BaseHumanMakeableGun">
