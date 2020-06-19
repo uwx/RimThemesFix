@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Projectile_PlagueBullet.cs" />
-    <Compile Include="YourLiking.cs" />
+    <Compile Include="ModExtension_PlagueBullet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
