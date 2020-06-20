@@ -32,7 +32,7 @@ namespace TST_PlagueGun
             if (Props != null && hitThing != null && hitThing is Pawn hitPawn) //Fancy way to declare a variable inside an if statement. - Thanks Erdelf.
             {
                 float rand = Rand.Value; // This is a random percentage between 0% and 100%
-                if (rand <= Props.AddHediffChance) // If the percentage falls under the chance, success!
+                if (rand <= Props.addHediffChance) // If the percentage falls under the chance, success!
                 {
                     /*
                      * Messages.Message flashes a message on the top of the screen. 
@@ -47,7 +47,7 @@ namespace TST_PlagueGun
                     ), MessageTypeDefOf.NeutralEvent);
 
                     // This checks to see if the character has a health differential, or hediff, on them already.
-                    Hediff plagueOnPawn = hitPawn.health?.hediffSet?.GetFirstHediffOfDef(Props.HediffToAdd);
+                    Hediff plagueOnPawn = hitPawn.health?.hediffSet?.GetFirstHediffOfDef(Props.hediffToAdd);
                     // This is an example of hardcoding a variable, which is generally bad practice. I've kept it from the original code as an example.
                     // A good exercise to see whether you understand exposing variables to XML would be to add a FloatRange to the ModExtension and get a random value from it here.
                     float randomSeverity = Rand.Range(0.15f, 0.30f);
@@ -61,7 +61,7 @@ namespace TST_PlagueGun
                     {
                         // These three lines create a new health differential or Hediff,
                         // put them on the character, and increase its severity by a random amount.
-                        Hediff hediff = HediffMaker.MakeHediff(Props.HediffToAdd, hitPawn);
+                        Hediff hediff = HediffMaker.MakeHediff(Props.hediffToAdd, hitPawn);
                         hediff.Severity = randomSeverity;
                         hitPawn.health.AddHediff(hediff);
                     }
@@ -73,7 +73,7 @@ namespace TST_PlagueGun
                      * Dust plumes, symbol bubbles, and text messages floating next to characters.
                      * This mote makes a small text message next to the character.
                      */
-                    MoteMaker.ThrowText(hitThing.PositionHeld.ToVector3(), hitThing.MapHeld, "TST_PlagueBullet_FailureMote".Translate(Props.AddHediffChance), 12f);
+                    MoteMaker.ThrowText(hitThing.PositionHeld.ToVector3(), hitThing.MapHeld, "TST_PlagueBullet_FailureMote".Translate(Props.addHediffChance), 12f);
                 }
             }
         }
